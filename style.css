@@ -1,0 +1,338 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #ffffff;
+}
+
+/* NAVBAR */
+.navbar {
+  width: 100%;
+  background: #bd4841; /* Warna merah sesuai desain */
+  padding: 12px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  height: 55px; /* Sesuaikan ukuran logo */
+}
+
+.nav-right {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+}
+
+.nav-right a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* HERO IMAGE */
+.hero-section {
+  margin-top: 75px; /* memberi jarak agar tidak tertutup navbar */
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* SECTION MENGAPA MAMISIBA */
+.mengapa-section {
+  background: #fbeedc; /* warna krem lembut */
+  padding: 80px 40px;
+  text-align: center;
+  margin-top: 0;
+  position: relative;
+}
+
+/* Background pattern melengkung */
+.mengapa-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("images/bg-curve.png") no-repeat center;
+  background-size: cover;
+  opacity: 0.25;
+  z-index: 0;
+}
+
+.section-title {
+  font-size: 38px;
+  font-weight: 800;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 2;
+}
+
+.section-title span {
+  color: #c75343; /* warna merah sesuai desain */
+}
+
+.mengapa-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.mengapa-item {
+  width: 28%;
+  text-align: center;
+}
+
+.mengapa-item .icon {
+  height: 80px;
+  margin-bottom: 15px;
+}
+
+.mengapa-item h3 {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.mengapa-item p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* CSS untuk Page 2 Website Profil Bisnis */
+
+.about-section {
+  background-color: #b74c43;
+  color: white;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+}
+
+.about-section h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.about-section ul {
+  list-style: disc;
+  padding-left: 20px;
+  line-height: 2;
+  font-size: 18px;
+}
+
+.divider {
+  width: 2px;
+  height: 200px;
+  background-color: #ffffff99;
+}
+
+.content-right {
+  font-size: 18px;
+  line-height: 1.7;
+  text-align: left;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .divider {
+    display: none;
+  }
+}
+
+/* Style Menu Page */
+.menu-section {
+  background-color: #f6efd7;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.menu-title {
+  font-size: 32px;
+  color: #b74c43;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.menu-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  justify-items: center;
+  max-width: 900px;
+  margin: auto;
+}
+
+.menu-gallery img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 6px;
+}
+
+/* Responsive Menu */
+@media screen and (max-width: 768px) {
+  .menu-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Style Order Page */
+.order-app-section {
+  background-color: #f6efd7;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.order-title {
+  font-size: 32px;
+  color: #b74c43;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.order-app-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.app-card {
+  background: #fff;
+  width: 160px;
+  border-radius: 12px;
+  padding: 25px 10px;
+  text-decoration: none;
+  color: #333;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.app-card img {
+  width: 70px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.app-card p {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.app-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
+
+/* Responsive Order Page */
+@media screen and (max-width: 768px) {
+  .order-app-container {
+    gap: 20px;
+  }
+
+  .app-card {
+    width: 140px;
+    padding: 20px 5px;
+  }
+}
+
+/* Footer Style */
+.footer-section {
+  background-color: #222;
+  color: #fff;
+  padding: 50px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-box {
+  width: 300px;
+}
+
+.footer-title {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #f4c037;
+  font-weight: bold;
+}
+
+.footer-links li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #ddd;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #f4c037;
+}
+
+.social-icons img {
+  width: 32px;
+  margin-right: 10px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 14px;
+  color: #aaa;
+  margin-top: 30px;
+  border-top: 1px solid #444;
+  padding-top: 15px;
+}
+
+/* Responsive Footer */
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer-box {
+    width: 100%;
+  }
+}
